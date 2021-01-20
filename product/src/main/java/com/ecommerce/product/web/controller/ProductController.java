@@ -3,7 +3,7 @@ package com.ecommerce.product.web.controller;
 
 import com.ecommerce.product.dao.ProductDao;
 import com.ecommerce.product.model.Product;
-import com.mproduits.web.exceptions.ProductNotFoundException;
+import com.ecommerce.product.web.exceptions.ProductNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
