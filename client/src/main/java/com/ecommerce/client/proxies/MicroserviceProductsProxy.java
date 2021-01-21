@@ -10,15 +10,16 @@ import java.util.List;
 import java.util.Optional;
 
 @FeignClient(name = "zuul-server")
+
 public interface MicroserviceProductsProxy {
 
-    @GetMapping(value = "/microservice-products/products")
+    @GetMapping(value = "/microservice-product/products")
     List<ProductDTO> findAll();
 
     /*
     * Notez ici la notation @PathVariable("id") qui est différente de celle qu'on utlise dans le contrôleur
     **/
-    @GetMapping( value = "/microservice-products/products/{id}")
+    @GetMapping( value = "/microservice-product/products/{id}")
     ProductDTO findById(@PathVariable("id") int id);
 
 

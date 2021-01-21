@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin("*")
 public class ProductController {
 
     @Autowired
@@ -25,7 +27,7 @@ public class ProductController {
 
 
     // Affiche la liste de tous les produits disponibles
-    @GetMapping(value = "/Produits")
+    @GetMapping(value = "/products")
     public List<Product> findAll(){
 
         List<Product> products = productDao.findAll();
@@ -39,7 +41,7 @@ public class ProductController {
     }
 
     //Récuperer un produit par son id
-    @GetMapping( value = "/Produits/{id}")
+    @GetMapping( value = "/products/{id}")
     public Optional<Product> recupererUnProduit(@PathVariable int id) {
 
         Optional<Product> product = productDao.findById(id);
