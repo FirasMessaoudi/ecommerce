@@ -91,7 +91,7 @@
                 <version>0.9.10</version>
                 <configuration>
                     <to>
-                        <image>firas/${project.artifactId}:${project.version}</image>
+                        <image>firas1234/${project.artifactId}:${project.version}</image>
                     </to>
                 </configuration>
             </plugin>
